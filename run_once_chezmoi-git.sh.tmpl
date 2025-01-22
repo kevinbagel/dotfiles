@@ -1,0 +1,7 @@
+#!/bin/bash
+#
+# Change chezmoi git remote to use personal github keypair
+#
+# 
+
+git -C {{ .chezmoi.sourceDir }} remote set-url origin personalgithub:kevinbagel/dotfiles.git  
