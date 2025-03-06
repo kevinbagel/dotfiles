@@ -3,7 +3,7 @@
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 {{ end }}
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.global.tap -}}
 tap {{ . | quote }}
 {{ end -}}
@@ -14,7 +14,7 @@ EOF
 
 {{ if eq .chezmoi.os "darwin" -}}
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.darwin.tap -}}
 tap {{ . | quote }}
 {{ end -}}
