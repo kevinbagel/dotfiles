@@ -24,3 +24,10 @@ Install chezmoi with brew first or just run
 ```
 sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply kevinbagel
 ```
+## Load iTerm2 settings
+
+```
+defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/.config/iterm2"
+defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+```
+Then restart iTerm
